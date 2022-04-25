@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>Login page</title>
+</head>
+
+<body>
+        
+        <form style="text-align: center;">
+                <h1>Login Page</h1>
+                Username<input type="text" name="userid" /></br/>
+                Password<input type="password" name="pswrd" />
+                <br/>
+                <input type="button" onclick="check(this.form)" value="Login" />
+                <input type="reset" value="Reset" />
+        </form>
+
+        <script language="javascript">
+                var ck_username = /^[1A-ZA-Z0-90-9A-ZA-ZA-Z-0-9]{10}$/;
+
+                var ck_pwd = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+                var randomColor = Math.floor(Math.random()*2**24).toString(16);
+
+                function check(form) {
+                        var userid = form.userid.value;
+                        var pwd = form.pswrd.value;
+                        if (!ck_username.test(userid) || !ck_pwd.test(pwd)) {
+                                alert("Incorrect User id/ pwd");
+                        }
+
+                        else {
+                                alert("Welcome to RVCE");
+                                document.write(Date() + "   " + "Welcome" + userid);
+                                document.body.bgColor = "randomColor";
+
+                        }
+                }
+
+
+        </script>
+</body>
+<!--Username(1RVCE20MCA)PASSWORD(Hruti@123)-->
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
