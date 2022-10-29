@@ -10,7 +10,7 @@ then
 	if [ $b != 1234 ] 
 	then
 		echo "alert bro "
-		echo `fswebcam -r 640x480 --jpeg 85 -D 1 web-cam-shot.jpg`
+		echo `fswebcam -r 640x480 --jpeg 85 -D 1 web-cam-shot.jpg` | sendmail -s "alert someone trying to access system" email
 		echo `poweroff`
 
 	else
